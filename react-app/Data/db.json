@@ -1,0 +1,75 @@
+{
+  "posts": [
+    {
+      "title": "xcvdbc",
+      "content": "xcvzbc",
+      "image": "uploads/a25u7rgx.jpg",
+      "userName": "\"\\\"Rewan\\\"\"",
+      "id": 25
+    },
+    {
+      "title": "scdsvd",
+      "content": "xsadvdfffhg",
+      "image": "uploads/k2ugs4zm.jpg",
+      "userName": "\"Rana\"",
+      "id": 26
+    },
+    {
+      "title": "cxzvxb",
+      "content": " zcxvcv",
+      "image": "uploads/ga2b7nab.jpg",
+      "userName": "Rana",
+      "id": 27
+    }
+  ],
+  "users": [
+    {
+      "email": "rewanhamed3@gmail.com",
+      "password": "$2a$10$tusKKXYB8j3xuobU1nsefO9vb0CYLBOxL/OYogyDhagGi3nRkUgiu",
+      "FirstName": "Rewan",
+      "LastName": "Hamed",
+      "confirmPassword": "rew@N223",
+      "id": 1
+    },
+    {
+      "email": "Reeeewan@gmail.com",
+      "password": "$2a$10$VVSOikknEh8OWAc46qy6Pum0LEpk1/aqi0nL8WH4pou5CLwPllXH2",
+      "FirstName": "Rewan",
+      "LastName": "Hamed",
+      "confirmPassword": "RR@123rr",
+      "id": 2
+    },
+    {
+      "email": "Reewan@gmail.com",
+      "password": "$2a$10$fVZ0KvOVP9vn9Z6xL8gcGe/4lZfIwUmAA1ORBjbLTV3dHEMi3b8Ge",
+      "FirstName": "Rewan",
+      "LastName": "Hamed",
+      "confirmPassword": "RR@123rr",
+      "id": 3
+    },
+    {
+      "email": "ranahamed@gmail.com",
+      "password": "$2a$10$iDjj4y9k0UwlXUqQ2W8KZON055tQc3ief.SQYOITs3j4R0Zvl.JLq",
+      "FirstName": "Rana",
+      "LastName": "Hamed",
+      "confirmPassword": "ran@N223",
+      "id": 4
+    },
+    {
+      "email": "reem11@gmail.com",
+      "password": "$2a$10$jPu6KAJPyqxLYsB0IzLMrO8PTj.f92qWD27einTyDDI4rhus3YiQe",
+      "FirstName": "Reem",
+      "LastName": "Hamed",
+      "confirmPassword": "re11@H14",
+      "id": 5
+    },
+    {
+      "email": "ahma@gmail.com",
+      "password": "$2a$10$cUQPuBr/fOpW9WvsvEe4He79F5kc0J.JjF32RtW67GFvT6UN./pjG",
+      "FirstName": "Ahmed",
+      "LastName": "Amin",
+      "confirmPassword": "ah13/4A@",
+      "id": 6
+    }
+  ]
+}
