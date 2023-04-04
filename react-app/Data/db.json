@@ -1,25 +1,28 @@
 {
   "posts": [
     {
-      "title": "xcvdbc",
-      "content": "xcvzbc",
-      "image": "uploads/a25u7rgx.jpg",
-      "userName": "\"\\\"Rewan\\\"\"",
-      "id": 25
+      "title": "Self-Care ❤️",
+      "content": "Self-care is anything you do to take care of yourself so you can stay physically, mentally, and emotionally well. Its benefits are better physical, mental, and emotional health and well-being. Research suggests self-care promotes positive health outcomes, such as fostering resilience, living longer, and becoming better equipped to manage stress.",
+      "image": "uploads/6tse8wl4.jpg",
+      "userName": "Rewan Hamed",
+      "userId": "2",
+      "id": 1
     },
     {
-      "title": "scdsvd",
-      "content": "xsadvdfffhg",
-      "image": "uploads/k2ugs4zm.jpg",
-      "userName": "\"Rana\"",
-      "id": 26
+      "title": " Mindfulness",
+      "content": "It’s estimated that 95% of our behavior runs on autopilot. That’s because neural networks underlie all of our habits, reducing our millions of sensory inputs per second into manageable shortcuts so we can function in this crazy world. These default brain signals are so efficient that they often cause us to relapse into old behaviors before we remember what we meant to do instead. ",
+      "image": "uploads/itru20un.jpg",
+      "userName": "zein Mohamed",
+      "userId": "7",
+      "id": 2
     },
     {
-      "title": "cxzvxb",
-      "content": " zcxvcv",
-      "image": "uploads/ga2b7nab.jpg",
-      "userName": "Rana",
-      "id": 27
+      "title": "EQ",
+      "content": "the ability to understand, use, and manage your own emotions in positive ways to relieve stress, communicate effectively, empathize with others, overcome challenges and defuse conflict",
+      "image": "uploads/yov3jwe4.jpg",
+      "userName": "zein Mohamed",
+      "userId": "7",
+      "id": 3
     }
   ],
   "users": [
@@ -70,6 +73,14 @@
       "LastName": "Amin",
       "confirmPassword": "ah13/4A@",
       "id": 6
+    },
+    {
+      "email": "zein@gmail.com",
+      "password": "$2a$10$xsWyF8uC3jR5WYA7nekOW.UkdIUArAIyyPGYd52cjeI17v14jkm62",
+      "FirstName": "zein",
+      "LastName": "Mohamed",
+      "confirmPassword": "Ze@22/ab",
+      "id": 7
     }
   ]
 }

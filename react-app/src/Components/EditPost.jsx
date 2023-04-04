@@ -1,53 +1,74 @@
-import "./Create.css";
+import "../Pages/CreatePost/Create.css";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ReactQuill from "react-quill";
-import { NavLink, Link } from "react-router-dom";
 
 import "react-quill/dist/quill.snow.css";
-const Create = () => {
+const EditPost = () => {
+  const [Post, setPost] = useState({});
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [image, setImage] = useState(null);
   const notify = () => toast.success("Post is Created Successfully");
+  const { id } = useParams();
+  useEffect(() => {
+    let post = { title, content, image };
+    async function getPost() {
+      try {
+        post = await axios.get(`http://localhost:3000/posts/${id}`);
+        console.log(post.data);
+        setTitle(post.data.title);
+        setContent(post.data.content);
+        setImage(post.data.image);
+        setPost(post.data);
+        return post;
+      } catch (err) {}
+    }
+    getPost();
+  }, []);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    // const data = {
-    //   title,
-    //   content,
-    //   imageUrl,
-    // };
     const userName = localStorage.getItem("Name");
     const userId = localStorage.getItem("Id");
-    // " " +localStorage.getItem("LastName");
-    console.log(userName);
     const formData = new FormData();
     formData.append("title", title);
     formData.append("content", content);
     formData.append("image", image);
     formData.append("userName", userName);
     formData.append("userId", userId);
-    const response = await axios.post("http://localhost:3000/posts", formData, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
+    const updatedPost = { ...Post, title, content, image };
+    const response = await axios.put(
+      `http://localhost:3000/posts/${id}`,
+      formData,
+      updatedPost,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
     if (response) {
       console.log("in toast");
-      toast.success("Your post is created successfully!");
+      console.log(updatedPost);
+      toast.success("Your post is Updated successfully!");
     }
-    console.log(response.data);
-    setTitle("");
-    setContent("");
-    setImage(null);
+    // console.log(response.data);
+    // setTitle(title);
+    // setContent(content);
+    // setImage(image);
+    // console.log(data);
+    // setTitle("");
+    // setContent("");
+    // setImage(null);
   };
   return (
     <div>
       <h1 className="mt-10 text-5xl " id="h1">
-        Create <span className="font-bold">Post</span>
+        Edit<span className="font-bold">Post</span>
       </h1>
       <div className="create mb-20">
         <form onSubmit={handleSubmit} className="content">
@@ -120,7 +141,7 @@ const Create = () => {
           <div className="mx-28">
             <button
               type="submit"
-              className="btn btn-xs p-2 rounded-xl text-white capitalize bg-[#705D9D] hover:bg-[#565d9a] sm:btn-sm md:btn-md "
+              className="btn btn-xs px-2 rounded-xl text-white capitalize bg-[#272B51] hover:bg-[#565d9a] sm:btn-sm md:btn-md "
             >
               Post
             </button>
@@ -131,4 +152,4 @@ const Create = () => {
   );
 };
 
-export default Create;
+export default EditPost;

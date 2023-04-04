@@ -1,20 +1,19 @@
 // import Card from "../../Components/Card";
 import Cards from "../../Components/Cards";
+import Carousel from "../../Components/Carousel";
 import CreateButton from "../../Components/CreateButton";
 import Hero from "../../Components/Hero";
-import PostForm from "../../Components/PostForm";
 import Posts from "../../Components/Posts";
-import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div>
       <Hero />
-
+      {/* <Carousel/> */}
       <Cards />
       {/* <Card/> */}
       <Posts />
-      <CreateButton/>
+      {localStorage.getItem("userToken") ? <CreateButton /> : " "}
     </div>
   );
 };

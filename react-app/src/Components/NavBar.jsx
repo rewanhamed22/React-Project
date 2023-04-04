@@ -4,22 +4,21 @@ import { Link, useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const navigate = useNavigate();
-  const [user, userState] = useState("");
-  useEffect(() => {
-    if (localStorage.getItem("userToken") !== null) {
-      userState(localStorage.getItem("FirstName"));
-    }
-  }, []);
+  // const [user, userState] = useState("");
+  // useEffect(() => {
+  //   if (localStorage.getItem("userToken") !== null) {
+  //     userState(localStorage.getItem("Name"));
+  //   }
+  // }, []);
   const handleLogout = () => {
     localStorage.removeItem("userToken");
-    localStorage.removeItem("FirstName");
-    localStorage.removeItem("LastName");
+    localStorage.removeItem("Name");
+    localStorage.removeItem("Id");
 
     navigate("/login");
   };
   return (
-    <div className="navbar sticky top-0 z-50 drop-shadow text-white  bg-[#272B51]">
-
+    <div className="navbar sticky top-0 z-50 drop-shadow text-white lg:px-8 bg-[#705D9D]">
       <div className="navbar-start text-white">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -40,7 +39,7 @@ const NavBar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-compact dropdown-content mt-3 -mr-1/2 p-2 shadow bg-[#705D9D]  rounded-box w-52"
           >
             <li>
               <Link to="/">Home</Link>
@@ -50,28 +49,24 @@ const NavBar = () => {
                 About us
               </Link>
             </li>
-            <li>
-              <a>Contact Us</a>
-            </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-3xl mr-8">Breathe</a>
+        <a className="btn btn-ghost normal-case text-4xl mr-8">
+          <Link to="/">Breathe</Link>
+        </a>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+      <div className="navbar-center hidden lg:flex ">
+        <ul className="menu menu-horizontal  px-1">
           <li>
             <Link to="/">Home</Link>
           </li>
           <li tabIndex={0}>
             <Link to="/about">About us</Link>
           </li>
-          <li>
-            <a>Contact Us</a>
-          </li>
         </ul>
       </div>
       <div className="navbar-end flex justify-end gap-6">
-        {user ? (
+        {localStorage.getItem("userToken") ? (
           <>
             <label tabIndex={0} className=" btn btn-ghost btn-circle avatar">
               <div className="w-15 rounded-full">

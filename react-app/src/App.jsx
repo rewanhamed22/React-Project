@@ -9,6 +9,13 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import "../src/Pages/Home/Home.css";
+import About from "./Pages/About";
+import Error from "./Pages/Error";
+
+import Contact from "./Components/Contact";
+import EditPost from "./Components/EditPost";
+// import FullPost from "./Components/FullPost";
+
 // import Contact from "./Pages/Contact";
 export default function App() {
   return (
@@ -22,6 +29,13 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/createpost" element={<Create />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/edit/:id" element={<EditPost />} />
+          {/* <Route path="/post/:id" element={<FullPost />} /> */}
+
+          <Route path="*" element={<Error />} />
+
           {/* <Route path="/contact" element={<Contact />} /> */}
         </Routes>
         <Footer />

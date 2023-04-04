@@ -138,13 +138,14 @@ const SignUp = () => {
         /* and other goodies */
       }) => (
         <div
-        // className="hero min-h-screen"
-        // style={{
-        //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://cdn.quizly.co/wp-content/uploads/2018/02/24044755/1145.jpg")`,
-        // }}
+          className="w-full"
+          // className="hero min-h-screen"
+          // style={{
+          //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://cdn.quizly.co/wp-content/uploads/2018/02/24044755/1145.jpg")`,
+          // }}
         >
-          <section className=" flex items-center justify-center ">
-            <div className="bg-gray-50 flex rounded-2xl shadow-lg max-w-3xl items-center m-20">
+          <section className=" flex items-center justify-center  ">
+            <div className="bg-white flex shad-card  shadow-lg max-w-5xl items-center  m-20">
               <div className="md:w-1/2 px-12">
                 <h2 className="font-bold text-3xl mt-10 text-[#272B51]">
                   Sign Up
@@ -162,11 +163,10 @@ const SignUp = () => {
                   onSubmit={handleSubmit}
                   className="flex flex-col gap-4 m-auto  text-black/80 "
                 >
-                  <div className="mt-8 ">
-                    <label className="mb-4" htmlFor="FirstName  ">
+                  <div className="mt-8 flex flex-col gap-1 ">
+                    <label className="" htmlFor="FirstName  ">
                       First Name
                     </label>
-                    <br></br>
                     <input
                       type="text"
                       id="FirstName"
@@ -175,7 +175,7 @@ const SignUp = () => {
                       onBlur={handleBlur}
                       value={values.FirstName}
                       placeholder="John"
-                      className="p-1  rounded-xl text-[#272B51]  input input-bordered leading-tight focus:outline-none focus:border-[#272B51] focus:text-[#272B51] bg-transparent"
+                      className="px-4  rounded-xl text-[#272B51] w-full input input-bordered leading-tight focus:outline-none focus:border-[#272B51] focus:text-[#272B51] bg-white border-[#705D9D]/30"
                     />
                     <div className="message text-red-400">
                       {errors.FirstName &&
@@ -183,11 +183,10 @@ const SignUp = () => {
                         errors.FirstName}
                     </div>
                   </div>
-                  <div>
+                  <div className="flex flex-col gap-1">
                     <label className="mb-4" htmlFor="LastName ">
                       Last Name
                     </label>
-                    <br></br>
 
                     <input
                       type="text"
@@ -197,17 +196,16 @@ const SignUp = () => {
                       onBlur={handleBlur}
                       value={values.LastName}
                       placeholder="ex: John"
-                      className="p-1  rounded-xl text-[#272B51]  input input-bordered leading-tight focus:outline-none focus:border-[#272B51] focus:text-[#272B51] bg-transparent"
+                      className="p-1  rounded-xl w-full  text-[#272B51]  input input-bordered leading-tight focus:outline-none focus:border-[#272B51] focus:text-[#272B51] bg-transparent"
                     />
                     <div className="message text-red-400">
                       {errors.LastName && touched.LastName && errors.LastName}
                     </div>
                   </div>
-                  <div>
+                  <div className="flex flex-col gap-1">
                     <label className="mb-4 " htmlFor="email">
                       Email
                     </label>
-                    <br></br>
                     <input
                       type="email"
                       name="email"
@@ -215,52 +213,52 @@ const SignUp = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.email}
-                      className="p-1  rounded-xl text-[#272B51]  input input-bordered leading-tight focus:outline-none focus:border-[#272B51] focus:text-[#272B51] bg-transparent"
+                      className="px-4  rounded-xl text-[#272B51] w-full input input-bordered leading-tight focus:outline-none focus:border-[#272B51] focus:text-[#272B51] bg-white border-[#705D9D]/30"
                     />
                     <div className="message text-red-400">
                       {errors.email && touched.email && errors.email}
                     </div>
                   </div>
-                  <div className="relative">
+                  <div className="flex flex-col gap-1">
                     <label htmlFor="password">Password</label>
-                    <br></br>
+                    <div className="relative">
+                      <input
+                        name="password"
+                        id="password"
+                        type={showPassword ? "text" : "password"}
+                        // type="password"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.password}
+                        className="p-1  rounded-xl text-[#272B51] w-full   input input-bordered leading-tight focus:outline-none focus:border-[#272B51] focus:text-[#272B51] bg-transparent"
+                      />
 
-                    <input
-                      name="password"
-                      id="password"
-                      type={showPassword ? "text" : "password"}
-                      // type="password"
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      value={values.password}
-                      className="p-1  rounded-xl text-[#272B51]  input input-bordered leading-tight focus:outline-none focus:border-[#272B51] focus:text-[#272B51] bg-transparent"
-                    />
-
-                    <button
-                      onClick={handleShowPassword}
-                      className="absolute mt-6"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        class="w-4 h-4 absolute top--1/2 right-4 -translate-y-1/2"
-                        fill="none"
+                      <button
+                        onClick={handleShowPassword}
+                        className="absolute mt-6"
                       >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M6.30147 15.5771C4.77832 14.2684 3.6904 12.7726 3.18002 12C3.6904 11.2274 4.77832 9.73158 6.30147 8.42294C7.87402 7.07185 9.81574 6 12 6C14.1843 6 16.1261 7.07185 17.6986 8.42294C19.2218 9.73158 20.3097 11.2274 20.8201 12C20.3097 12.7726 19.2218 14.2684 17.6986 15.5771C16.1261 16.9282 14.1843 18 12 18C9.81574 18 7.87402 16.9282 6.30147 15.5771ZM12 4C9.14754 4 6.75717 5.39462 4.99812 6.90595C3.23268 8.42276 2.00757 10.1376 1.46387 10.9698C1.05306 11.5985 1.05306 12.4015 1.46387 13.0302C2.00757 13.8624 3.23268 15.5772 4.99812 17.0941C6.75717 18.6054 9.14754 20 12 20C14.8525 20 17.2429 18.6054 19.002 17.0941C20.7674 15.5772 21.9925 13.8624 22.5362 13.0302C22.947 12.4015 22.947 11.5985 22.5362 10.9698C21.9925 10.1376 20.7674 8.42276 19.002 6.90595C17.2429 5.39462 14.8525 4 12 4ZM10 12C10 10.8954 10.8955 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8955 14 10 13.1046 10 12ZM12 8C9.7909 8 8.00004 9.79086 8.00004 12C8.00004 14.2091 9.7909 16 12 16C14.2092 16 16 14.2091 16 12C16 9.79086 14.2092 8 12 8Z"
-                          fill="#000000"
-                        />
-                      </svg>
-                    </button>
-                    <div className="message text-red-400">
-                      {errors.password && touched.password && errors.password}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          class="w-4 h-4 absolute top--1/2 right-4 -translate-y-1/2"
+                          fill="none"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M6.30147 15.5771C4.77832 14.2684 3.6904 12.7726 3.18002 12C3.6904 11.2274 4.77832 9.73158 6.30147 8.42294C7.87402 7.07185 9.81574 6 12 6C14.1843 6 16.1261 7.07185 17.6986 8.42294C19.2218 9.73158 20.3097 11.2274 20.8201 12C20.3097 12.7726 19.2218 14.2684 17.6986 15.5771C16.1261 16.9282 14.1843 18 12 18C9.81574 18 7.87402 16.9282 6.30147 15.5771ZM12 4C9.14754 4 6.75717 5.39462 4.99812 6.90595C3.23268 8.42276 2.00757 10.1376 1.46387 10.9698C1.05306 11.5985 1.05306 12.4015 1.46387 13.0302C2.00757 13.8624 3.23268 15.5772 4.99812 17.0941C6.75717 18.6054 9.14754 20 12 20C14.8525 20 17.2429 18.6054 19.002 17.0941C20.7674 15.5772 21.9925 13.8624 22.5362 13.0302C22.947 12.4015 22.947 11.5985 22.5362 10.9698C21.9925 10.1376 20.7674 8.42276 19.002 6.90595C17.2429 5.39462 14.8525 4 12 4ZM10 12C10 10.8954 10.8955 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8955 14 10 13.1046 10 12ZM12 8C9.7909 8 8.00004 9.79086 8.00004 12C8.00004 14.2091 9.7909 16 12 16C14.2092 16 16 14.2091 16 12C16 9.79086 14.2092 8 12 8Z"
+                            fill="#000000"
+                          />
+                        </svg>
+                      </button>
+                      <div className="message text-red-400">
+                        {errors.password && touched.password && errors.password}
+                      </div>
                     </div>
                   </div>
-                  <div className="relative">
-                    <label htmlFor="confirmPassword">Confirm Password</label>
 
+                  <div className="relative ">
+                    <label htmlFor="confirmPassword">Confirm Password</label>
                     <input
                       name="confirmPassword"
                       id="confirmPassword"
@@ -269,7 +267,7 @@ const SignUp = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.confirmPassword}
-                      className="p-1  rounded-xl text-[#272B51]  input input-bordered leading-tight focus:outline-none focus:border-[#272B51] focus:text-[#272B51] bg-transparent"
+                      className="p-1  rounded-xl text-[#272B51] w-full  input input-bordered leading-tight focus:outline-none focus:border-[#272B51] focus:text-[#272B51] bg-transparent"
                     />
                     <button
                       onClick={handleShowCPassword}
@@ -296,18 +294,17 @@ const SignUp = () => {
                       errors.confirmPassword}
                   </div>
                   <div className="message text-red-400">{message}</div>
-                
-                <input type="submit" value="Submit" className="btn btn-sm bg-[#272B51] capitalize rounded-xl w-2/5 -mt-4 text-white hover:scale-105 duration-300"  disabled={isSubmitting} />
 
-                    
-                  
+                  <input
+                    type="submit"
+                    value="Submit"
+                    className="btn btn-sm bg-[#705D9D] capitalize rounded-xl w-3/4 mx-auto mb-12 -mt-4 text-white hover:scale-105 duration-300"
+                    disabled={isSubmitting}
+                  />
                 </form>
               </div>
-              <figure className="w-1/2  object-cover ">
-                <img
-                  className=" "
-                  src="https://i.pinimg.com/564x/44/5b/cd/445bcda5d3da1630ea05dbdd228b5cea.jpg"
-                ></img>
+              <figure className="  object-cover ">
+                <img className=" " src="src/assets/Mobile login.gif"></img>
               </figure>
             </div>
           </section>

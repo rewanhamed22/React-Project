@@ -14,11 +14,11 @@ class AuthService {
           localStorage.setItem("userToken", res.data.accessToken);
 
           // localStorage.setItem("userToken", JSON.stringify(res.data));
-          localStorage.setItem("FirstName", res.data.user.FirstName);
           localStorage.setItem(
-            "LastName",
-            JSON.stringify(res.data.user.LastName)
+            "Name",
+            res.data.user.FirstName + " " + res.data.user.LastName
           );
+          localStorage.setItem("Id", res.data.user.id);
         }
         return res.data;
       });

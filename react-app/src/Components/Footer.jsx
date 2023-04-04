@@ -1,10 +1,10 @@
 const Footer = () => {
   return (
-    <footer className="footer items-center p-4 bg-[#272B51] text-neutral-content text-white">
+    <footer className="footer items-center p-4 px-8 bg-[#705D9D] text-neutral-content text-white">
       <div className="items-center grid-flow-col">
-        <a className="btn btn-ghost normal-case text-3xl mr-8">Breathe</a>
-        <p className="">Copyright © 2023 - All right reserved</p>
+        <a className="btn btn-ghost normal-case text-3xl ">Breathe</a>
       </div>
+        <p className="m-auto">Copyright © 2023 - All right reserved</p>
       <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
         <a>
           <svg
