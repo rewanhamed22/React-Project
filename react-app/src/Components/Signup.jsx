@@ -196,7 +196,7 @@ const SignUp = () => {
                       onBlur={handleBlur}
                       value={values.LastName}
                       placeholder="ex: John"
-                      className="p-1  rounded-xl w-full  text-[#272B51]  input input-bordered leading-tight focus:outline-none focus:border-[#272B51] focus:text-[#272B51] bg-transparent"
+                      className="px-4  rounded-xl text-[#272B51] w-full input input-bordered leading-tight focus:outline-none focus:border-[#272B51] focus:text-[#272B51] bg-white border-[#705D9D]/30"
                     />
                     <div className="message text-red-400">
                       {errors.LastName && touched.LastName && errors.LastName}
@@ -256,9 +256,10 @@ const SignUp = () => {
                       </div>
                     </div>
                   </div>
+                  <div className="flex flex-col gap-1">
 
-                  <div className="relative ">
                     <label htmlFor="confirmPassword">Confirm Password</label>
+                  <div className="relative ">
                     <input
                       name="confirmPassword"
                       id="confirmPassword"
@@ -293,12 +294,13 @@ const SignUp = () => {
                       touched.confirmPassword &&
                       errors.confirmPassword}
                   </div>
+                  </div>
                   <div className="message text-red-400">{message}</div>
 
                   <input
                     type="submit"
                     value="Submit"
-                    className="btn btn-sm bg-[#705D9D] capitalize rounded-xl w-3/4 mx-auto mb-12 -mt-4 text-white hover:scale-105 duration-300"
+                    className="btn btn-sm bg-[#705D9D] border-[#705D9D] p-auto text-xl capitalize rounded-xl w-3/4 mx-auto mb-12 -mt-4 text-white hover:bg-white hover:text-[#705D9D] hover:scale-105 duration-300"
                     disabled={isSubmitting}
                   />
                 </form>
