@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import EditPost from "./EditPost";
 import { Link } from "react-router-dom";
 import Trash from "./Trash";
@@ -7,9 +8,11 @@ import EditBtn from "./EditBtn";
 import { ToastContainer, toast } from "react-toastify";
 // import FullPost from "./FullPost";
 
-const Posts = () => {
+const Posts = (props) => {
   const [data, setData] = useState([]);
+  const [post, setPost] = useState([]);
   const [showEdit, setShow] = useState(false);
+  const navigate = useNavigate();
   console.log(showEdit);
 
   useEffect(() => {
@@ -25,7 +28,17 @@ const Posts = () => {
 
     getPosts();
   }, []);
-
+  const handleReadMore = (id) => {
+    axios
+      .get(`http://localhost:3000/posts/${id}`)
+      .then((response) => {
+        setPost(response.data);
+        navigate(`/postdetails/${id}`);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const handleDelete = (id) => {
     axios
       .delete(`http://localhost:3000/posts/${id}`)
@@ -38,14 +51,16 @@ const Posts = () => {
       })
       .catch((error) => {
         console.log(error);
+        toast.error("Sorry.., something went wrong. Please try again later");
       });
   };
+
   if (!data) return <Loader />;
   return (
     <div className="max-w-[1640px] m-auto px-4 py-12">
-      <h1 className="text-[#705D9D] font-bold text-4xl text-center ">
+      {/* <h1 className="text-[#705D9D] font-bold text-4xl text-center ">
         Popular Posts
-      </h1>
+      </h1> */}
       <div className="grid grid-cols-1 lg:grid-cols-3 mt-4 mx-5  gap-12 pt-4 ">
         {data.map((post) => (
           <div
@@ -97,7 +112,18 @@ const Posts = () => {
                   )}{" "}
                 </div>
               </div>
-              <p className="text-xl text-[#487EB0]">{post.content}</p>
+              <p className="text-xl text-[#487EB0]">
+                {post.content.substring(0, 70) + "..."}
+              </p>
+              <Link to={`postdetails/${post.id}`}>
+                <button
+                  className="btn btn-sm bg-[#705D9D] border-[#705D9D] p-auto  text-lg text-center capitalize rounded-xl w-3/7 mt-4 ml-32 lg:ml-64 border-none  text-white hover:bg-white hover:text-[#705D9D] hover:scale-110 ease-in-out duration-300"
+                  onClick={() => handleReadMore(props.id)}
+                >
+                  Read More
+                </button>
+              </Link>
+
               <div className="flex flex-row-2 ">
                 <div className="avatar ">
                   <div className=" w-12 h-12 mt-2 rounded-full">
@@ -105,7 +131,7 @@ const Posts = () => {
                   </div>
                 </div>
 
-                <span className="mx-2 mt-1 text-lg text-[#705D9D] ">
+                <span className="mx-2 mt-4 text-lg text-[#705D9D] ">
                   {post.userName}
                 </span>
                 {/* <span className="mx-3 text-zinc-400 text-sm ">

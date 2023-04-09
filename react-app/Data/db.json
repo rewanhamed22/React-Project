@@ -9,20 +9,20 @@
       "id": 1
     },
     {
-      "title": " Mindfulness",
-      "content": "It’s estimated that 95% of our behavior runs on autopilot. That’s because neural networks underlie all of our habits, reducing our millions of sensory inputs per second into manageable shortcuts so we can function in this crazy world. These default brain signals are so efficient that they often cause us to relapse into old behaviors before we remember what we meant to do instead. ",
-      "image": "uploads/itru20un.jpg",
-      "userName": "zein Mohamed",
-      "userId": "7",
-      "id": 2
+      "title": "EQ",
+      "content": "Emotional intelligence is defined as the ability to understand and manage your own emotions, as well as recognize and influence the emotions of those around you. The term was first coined in 1990 by researchers John Mayer and Peter Salovey, but was later popularized by psychologist Daniel Goleman.",
+      "image": "uploads/dufzfnwl.jpg",
+      "userName": "Rewan Hamed",
+      "userId": "2",
+      "id": 3
     },
     {
-      "title": "EQ",
-      "content": "the ability to understand, use, and manage your own emotions in positive ways to relieve stress, communicate effectively, empathize with others, overcome challenges and defuse conflict",
-      "image": "uploads/yov3jwe4.jpg",
-      "userName": "zein Mohamed",
-      "userId": "7",
-      "id": 3
+      "title": "Mindfullness",
+      "content": "Mindfulness is a type of meditation in which you focus on being intensely aware of what you're sensing and feeling in the moment, without interpretation or judgment. Practicing mindfulness involves breathing methods, guided imagery, and other practices to relax the body and mind and help reduce stress.",
+      "image": "uploads/altf5efw.jpg",
+      "userName": "Ahmed Amin",
+      "userId": "8",
+      "id": 4
     }
   ],
   "users": [
@@ -81,6 +81,14 @@
       "LastName": "Mohamed",
       "confirmPassword": "Ze@22/ab",
       "id": 7
+    },
+    {
+      "email": "ahmamin11@gmail.com",
+      "password": "$2a$10$lPuuzTYkFobzsAAitft/FuBD4lGJV2wL5JD6kWWo52mP7pqcy2VSG",
+      "FirstName": "Ahmed",
+      "LastName": "Amin",
+      "confirmPassword": "A22/3@aa",
+      "id": 8
     }
   ]
 }

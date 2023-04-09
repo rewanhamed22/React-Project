@@ -56,14 +56,7 @@ const EditPost = () => {
       console.log(updatedPost);
       toast.success("Your post is Updated successfully!");
     }
-    // console.log(response.data);
-    // setTitle(title);
-    // setContent(content);
-    // setImage(image);
-    // console.log(data);
-    // setTitle("");
-    // setContent("");
-    // setImage(null);
+
   };
   return (
     <div>

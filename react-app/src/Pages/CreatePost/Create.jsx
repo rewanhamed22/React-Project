@@ -11,18 +11,13 @@ const Create = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [image, setImage] = useState(null);
-  const notify = () => toast.success("Post is Created Successfully");
+  const [showImage, setShowImage] = useState(null);
+
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    // const data = {
-    //   title,
-    //   content,
-    //   imageUrl,
-    // };
     const userName = localStorage.getItem("Name");
     const userId = localStorage.getItem("Id");
-    // " " +localStorage.getItem("LastName");
     console.log(userName);
     const formData = new FormData();
     formData.append("title", title);
@@ -109,7 +104,9 @@ const Create = () => {
                   <input
                     id="file-upload"
                     type="file"
-                    onChange={(e) => setImage(e.target.files[0])}
+                    onChange={(e) => {
+                      setImage(e.target.files[0]);
+                    }}
                     className="sr-only"
                   />
                 </label>
