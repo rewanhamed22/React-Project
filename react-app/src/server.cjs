@@ -10,12 +10,12 @@ server.db = router.db;
 server.use(auth);
 server.use(router);
 
-server.post("/posts", (req, res) => {
+server.post("https://vercel-backend-breathe.vercel.app/posts", (req, res) => {
   const db = router.db;
   const { title, value, imageUrl, userId } = req.body;
   const id = Date.now().toString();
   const post = { id, title, value, imageUrl, userId };
-  db.get("posts").push(post).write();
+  db.get("https://vercel-backend-breathe.vercel.app/posts").push(post).write();
   res.json(post);
 });
 
