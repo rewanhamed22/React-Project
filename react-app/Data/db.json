@@ -3,7 +3,7 @@
     {
       "title": "Self-Care ❤️",
       "content": "Self-care is anything you do to take care of yourself so you can stay physically, mentally, and emotionally well. Its benefits are better physical, mental, and emotional health and well-being. Research suggests self-care promotes positive health outcomes, such as fostering resilience, living longer, and becoming better equipped to manage stress.",
-      "image": "uploads/6tse8wl4.jpg",
+      "image": "uploads/lrisdvpd.jpg",
       "userName": "Rewan Hamed",
       "userId": "2",
       "id": 1
@@ -23,6 +23,22 @@
       "userName": "Ahmed Amin",
       "userId": "8",
       "id": 4
+    },
+    {
+      "title": "Motivation",
+      "content": "The term \"motivation\" describes why a person does something. It is the driving force behind human actions. Motivation is the process that initiates, guides, and maintains goal-oriented behaviors.\r\n\r\nFor instance, motivation is what helps you lose extra weight, or pushes you to get that promotion at work. In short, motivation causes you to act in a way that gets you closer to your goals. Motivation includes the biological, emotional, social, and cognitive forces that activate human behavior.",
+      "image": "uploads/48oytz2d.png",
+      "userName": "Rewan Hamed",
+      "userId": "2",
+      "id": 5
+    },
+    {
+      "title": "Mental Health",
+      "content": "Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make healthy choices. 1. Mental health is important at every stage of life, from childhood and adolescence through adulthood.",
+      "image": "uploads/97h428lv.png",
+      "userName": "Rana Hamed",
+      "userId": "9",
+      "id": 6
     }
   ],
   "users": [
@@ -89,6 +105,14 @@
       "LastName": "Amin",
       "confirmPassword": "A22/3@aa",
       "id": 8
+    },
+    {
+      "email": "rana@gmail.com",
+      "password": "$2a$10$xqIANhYQyRQd8zHh.HQaDeaLGqB2sWvc0DBQkucNrPdahnmU4Pgx6",
+      "FirstName": "Rana",
+      "LastName": "Hamed",
+      "confirmPassword": "R@na2371",
+      "id": 9
     }
   ]
 }
